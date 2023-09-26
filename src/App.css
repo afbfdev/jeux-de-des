@@ -1,0 +1,85 @@
+.App {
+  text-align: center;
+}
+
+h1 {
+  color: #eb4d4d;
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  margin: 10px;
+  display: inline-block;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+  color: #333;
+}
+
+.dice.rolling {
+  animation: roll;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotation(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dic-game {
+  text-align: center;
+}
+
+.btn button {
+  width: 15%;
+  background-color: inherit;
+  color: #eb4d4d;
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ----------------Les media quey--------------------- */
+
+@media (max-width: 768px) {
+  .btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .btn button {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .btn button {
+    width: 15%;
+  }
+}
